@@ -14,3 +14,5 @@ spec:
       valueFiles:
       - values-staging.yaml
     path: helm
+    repoURL: https://github.com/dkypraiou/nd064_course_1_v2/tree/main/project
+    targetRevision: HEAD
