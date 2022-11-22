@@ -54,3 +54,4 @@ DEBUG:root:2022-11-21 10:55:18,127, Article a post retrieved!
 INFO:werkzeug:2022-11-21 10:55:18,128, 172.17.0.1 - - [21/Nov/2022 10:55:18] "GET /7 HTTP/1.1" 200 -
 INFO:werkzeug:2022-11-21 10:55:18,154, 172.17.0.1 - - [21/Nov/2022 10:55:18] "GET /static/css/main.css HTTP/1.1" 304 -
 INFO:werkzeug:2022-11-21 10:55:19,423, 172.17.0.1 - - [21/Nov/2022 10:55:19] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2022-11-21 14:16:22,367, 172.17.0.1 - - [21/Nov/2022 14:16:22] "GET /static/css/main.css HTTP/1.1" 304 -

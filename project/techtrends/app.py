@@ -53,14 +53,14 @@ def post(post_id):
         logging.error('Article with id %s does not exist!',post_id)
         return render_template("404.html"), 404
     else:
-        logging.debug('Article %s retrieved!',post["title"])
+        app.logging.debug('Article %s retrieved!',post["title"])
         return render_template("post.html", post=post)
 
 
 # Define the About Us page
 @app.route("/about")
 def about():
-    logging.debug("About page rendered!")
+    app.logging.debug("About page rendered!")
     return render_template("about.html")
 
 
@@ -80,7 +80,7 @@ def create():
             )
             connection.commit()
             connection.close()
-            logging.debug('Article %s created!',title)
+            app.logging.debug('Article %s created!',title)
             return redirect(url_for("index"))
     return render_template("create.html")
 
@@ -113,7 +113,7 @@ def initialize_logger():
     log_level = (
         getattr(logging, log_level)
         if log_level in ["CRITICAL", "DEBUG", "ERROR", "INFO", "WARNING",]
-        else logging.DEBUG
+        else app.logging.DEBUG
     )
 
     logging.basicConfig(
